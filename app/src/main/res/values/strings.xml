@@ -3,5 +3,10 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="welcome">Welcome</string>
+    <string name="info">Create an account and access thousand \nof cool stuff</string>
+    <string name="getting_started">Getting Started</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="log_in">Log in</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

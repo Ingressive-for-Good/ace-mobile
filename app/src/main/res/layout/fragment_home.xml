@@ -6,17 +6,76 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/image_chat"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/chat_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/welcome"
+        android:textColor="@color/purple"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/image_chat"
+        app:layout_constraintStart_toStartOf="@id/image_chat"
+        app:layout_constraintTop_toBottomOf="@id/image_chat" />
+
+    <TextView
+        android:id="@+id/text_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/info"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/text_welcome"
+        app:layout_constraintStart_toStartOf="@id/text_welcome"
+        app:layout_constraintTop_toBottomOf="@id/text_welcome" />
+
+    <Button
+        android:id="@+id/button_getting_started"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/getting_started"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@id/text_info"
+        app:layout_constraintStart_toStartOf="@id/text_info"
+        app:layout_constraintTop_toBottomOf="@id/text_info" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/button_getting_started"
+        app:layout_constraintStart_toStartOf="@id/button_getting_started"
+        app:layout_constraintTop_toBottomOf="@id/button_getting_started">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="@string/already_have_an_account"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="@string/log_in"
+            android:textAlignment="center"
+            android:textColor="#D23D3D" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
