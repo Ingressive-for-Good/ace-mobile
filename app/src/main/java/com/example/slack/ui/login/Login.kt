@@ -27,10 +27,10 @@ class Login : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.buttonLogin.setOnClickListener {
-            Snackbar.make(binding.root, "About to login", Snackbar.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.action_login_to_nav_dashboard)
         }
         binding.textSignUp.setOnClickListener {
-            //findNavController().navigate(R.id)
+            findNavController().navigate(R.id.action_login_to_sign_up)
         }
     }
 
