@@ -1,14 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.Onboarding">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/image1"
+        android:layout_marginTop="60dp"
+        android:contentDescription="onboarding image"
+        tools:ignore="HardcodedText" />
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintBottom_toTopOf="@id/get_started_bt"
+        android:textSize="30sp"
+        android:textColor="@color/purple_light"
+        tools:ignore="HardcodedText" />
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcome_text"
+        android:text="Create an account and access thousand of cool stuff "
+        android:padding="20dp"
+        tools:ignore="HardcodedText" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/get_started_bt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cornerRadius="5dp"
+        android:text="Get Started"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="30dp"
+        tools:ignore="HardcodedText" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/get_started_bt"
+        app:layout_constraintTop_toBottomOf="@id/get_started_bt"
+        android:text="Already have an account? "
+        app:layout_constraintEnd_toEndOf="@id/get_started_bt"
+        tools:ignore="HardcodedText" />
 
-</FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
