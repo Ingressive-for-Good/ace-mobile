@@ -2,6 +2,7 @@ package com.example.sidedrawer
 
 import android.os.Bundle
 import android.view.Menu
+import android.view.View
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -33,12 +34,28 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-
+                R.id.nav_dashboard, R.id.nav_chats, R.id.nav_mention, R.id.nav_profile
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if(destination.id == R.id.login
+                || destination.id == R.id.splash_screen
+                || destination.id == R.id.onboarding
+                || destination.id == R.id.sign_up) {
+
+                navView.visibility = View.GONE
+            }
+            else{
+                navView.visibility = View.VISIBLE
+            }
+
+        }
+
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
