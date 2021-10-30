@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/splash_screen">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -74,5 +74,19 @@
         android:name="com.example.slack.ui.mention.Mention"
         android:label="@string/mention"
         tools:layout="@layout/fragment_mention"/>
+    <fragment
+        android:id="@+id/splash_screen"
+        android:name="com.example.slack.ui.SplashScreen"
+        android:label="splash"
+        tools:layout="@layout/fragment_splash_screen"/>
+    <action
+        android:id="@+id/action_global_onboarding"
+        app:destination="@id/onboarding"
+        app:enterAnim="@animator/nav_default_enter_anim"
+        app:exitAnim="@animator/nav_default_exit_anim"
+        app:popUpTo="@id/mobile_navigation"
+        app:popUpToInclusive="true"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
 
 </navigation>
