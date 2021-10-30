@@ -54,5 +54,25 @@
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
+    <fragment
+        android:id="@+id/nav_chats"
+        android:name="com.example.slack.ui.chats.Chats"
+        android:label="@string/chats"
+        tools:layout="@layout/fragment_chats"/>
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.example.slack.ui.dashboard.Dashboard"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard"/>
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.slack.ui.profile.Profile"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/nav_mention"
+        android:name="com.example.slack.ui.mention.Mention"
+        android:label="@string/mention"
+        tools:layout="@layout/fragment_mention"/>
 
 </navigation>
