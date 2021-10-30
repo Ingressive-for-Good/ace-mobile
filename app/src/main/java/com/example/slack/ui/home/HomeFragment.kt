@@ -23,7 +23,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
@@ -40,10 +40,10 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.buttonGettingStarted.setOnClickListener {
-            findNavController().navigate(R.id.action_navigation_home_to_signUp)
+            //findNavController().navigate(R.id.action_navigation_home_to_signUp)
         }
         binding.textLogIn.setOnClickListener {
-            findNavController().navigate(R.id.action_navigation_home_to_login)
+            //findNavController().navigate(R.id.action_navigation_home_to_login)
         }
     }
 

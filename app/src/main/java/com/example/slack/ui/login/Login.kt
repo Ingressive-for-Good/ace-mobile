@@ -30,7 +30,7 @@ class Login : Fragment() {
             Snackbar.make(binding.root, "About to login", Snackbar.LENGTH_SHORT).show()
         }
         binding.textSignUp.setOnClickListener {
-            findNavController().navigate(R.id.action_login_to_signUp)
+            //findNavController().navigate(R.id)
         }
     }
 
